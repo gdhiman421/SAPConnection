@@ -17,16 +17,11 @@ namespace SAPGUIConnection
         {
             if (!IsPostBack)
             {
-                ServerD.Text = Dest.systemServerName;
-                Instance.Text = Dest.systemInstance;
-                SystemID.Text = Dest.systemID;
-                Client.Text = Dest.systemClient;
-                UserID.Text = Dest.systemUserID;
-                Password.Text = Dest.systemPassword;
-                SAPCon();
+                
                 LabelNoUserIdExists.Visible = false;
                 PanelIfUserExists.Visible = false;
                 PanelUserDetails.Visible = false;
+                
             }
 
         }
@@ -49,7 +44,7 @@ namespace SAPGUIConnection
                 Dest.destination.Ping();
                 MessageBox.Show("Connected to "+ SystemID.Text+" System  !!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Connection Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
 
@@ -172,6 +167,9 @@ namespace SAPGUIConnection
             {
                 MessageBox.Show("Error :" + ex);
             }
+
+            
+
 
             RolesList.Visible = false;
         }
@@ -674,6 +672,8 @@ namespace SAPGUIConnection
             else
             {
             SAPCon();
+                UserAdmin.Enabled = true;
+                UserDetailsButton.Enabled = true;
             }
 
             
@@ -684,12 +684,7 @@ namespace SAPGUIConnection
        public static RfcDestination destination;
        public static IRfcTable Roles;
        public static string userLock;
-       public static string systemServerName="sap2.remoteides.com";
-       public static string systemInstance="45";
-       public static string systemID="EH7";
-       public static string systemClient="800";
-       public static string systemUserID="EID_ASSES";
-       public static string systemPassword="Welcome@nyl2";
+       
 
     }
 }

@@ -6,16 +6,17 @@
         <h3>SAP Connection</h3>
         <h5> <b>1. Create/Modify User:</b> To Create, Change, Reset Password, Add/Remove Role, Lock/Unlock and Delete an SAP User.</h5>
         <h5> <b>2. Retrieve User Details:</b> To extract the Details of user from SAP System.</h5>
-        <h5> <b>3. SAP Server Details:</b> To enter the SAP System Parameters.</h5>
+        <h5> <b>3. SAP Server Details:</b> To enter/change the SAP System Parameters.</h5>
+        <h5> <b>Note: Please Maintain the Server Details First</b></h5>
     </div>
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <asp:Button ID="UserAdmin" runat="server" Text="Create/Modify User" OnClick="UserAdmin_Click" />
+    <asp:Button ID="UserAdmin" runat="server" Text="Create/Modify User" OnClick="UserAdmin_Click" Enabled="False" />
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <asp:Button ID="UserDetailsButton" runat="server" Text="Retrieve User Details" OnClick="UserDetails_Click" />
+    <asp:Button ID="UserDetailsButton" runat="server" Text="Retrieve User Details" OnClick="UserDetails_Click" Enabled="False" />
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="SAPServerDetails" runat="server" Text="SAP Server Details" OnClick="SAPServerDetails_Click" />
